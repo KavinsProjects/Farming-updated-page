@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Header Section */
+.header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.header nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header nav ul li a:hover,
+.header nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Featured Products Section */
+.featured-products {
+    background-color: #ecf0f1;
+    padding: 50px 0;
+}
+
+
+h2 {
+    font-size: 2.5em; /* Increased font size */
+    margin-bottom: 20px;
+    color: #333;
+}
+.products-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+
+
+
+.product-under{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    color: #27ae60;
+    margin-top: 10px;
+}
+
+/* Product Information Section */
+.product-info {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Contact Farmer Section */
+.contact-farmer {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-farmer form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-farmer label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-farmer input,
+.contact-farmer select,
+.contact-farmer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-farmer button {
+    width: 100%;
+    padding: 15px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+/*text algin */
+
+.product-info .container {
+    text-align: center;
+}
+
+/* Navbar Styles */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+     /* Adjust the background color as needed */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for hide/show */
+}
+
+.sticky-nav.hidden {
+    transform: translateY(-100%);
+}
+
+/* footer.css */
+.footer {
+    background-color: #5FA777;
+    color: #FCF8F7;
+    padding: 1.5rem 0; /* py-6 equivalent */
+    text-align: center;
+}
+
+.footer a {
+    color: #FCF8F7;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #D3E8E4; /* Slightly lighter shade for hover effect */
+}
+
+.bg-homepage-color {
+    background-color: #2A2A2A; /* Example color, update based on your site */
+}
+.text-homepage-secondary {
+    color: #AAAAAA; /* Example color */
+}
+.bg-homepage-accent {
+    background-color: #00A896; /* Example accent color */
+}
+.bg-homepage-accent-light {
+    background-color: #02C39A; /* Lighter accent for hover effect */
+}
+.text-homepage-highlight {
+    color: #FFD700; /* Example highlight color */
+}
+
+
+

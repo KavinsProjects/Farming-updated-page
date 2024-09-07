@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyers DASHBOARD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf2f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Initially hide details and description */
+        .product-card .details {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+        }
+
+        /* Visible details when clicked */
+        .product-card.active .details {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .product-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #2980b9;
+        }
+
+        .product-card .seller-details {
+            font-size: 0.9em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* Styling the Buy Now button */
+        .buy-now-btn {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #1e8449;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive grid */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Style for order summary button */
+        .order-summary-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .order-summary-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Farm-acy</h1>
+</header>
+
+<div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search for products...">
+    <button type="button" id="search-button">Search</button>
+</div>
+<style>
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-bar {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#search-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #1e6f9f;
+}
+
+@media (max-width: 768px) {
+    #search-bar {
+        width: 80%;
+    }
+}
+</style>>
+
+
+<div class="container">
+    <h2>Available Products</h2>
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/tommoto.jpg" alt="Tomatoes">
+            <div class="details">
+                <h2>Fresh Tomatoes</h2>
+                <p>Organically grown, ripe and juicy tomatoes.</p>
+                <p class="seller-details">Seller: Dhoni | Location: Jharkhand</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/raddish.jpg" alt="Potatoes">
+            <div class="details">
+                <h2>Fresh raddish</h2>
+                <p>Freshly harvested organic potatoes.</p>
+                <p class="seller-details">Seller: Janagan | Location: Thanjavur</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/binjal.jpg" alt="Apples">
+            <div class="details">
+                <h2>Brinjals</h2>
+                <p>Crisp and delicious, perfect for snacking.</p>
+                <p class="seller-details">Seller: Harshini | Location: Coimbatore</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/carrot.jpg" alt="Carrots">
+            <div class="details">
+                <h2>Fresh Carrots</h2>
+                <p>Sweet and crunchy organic carrots.</p>
+                <p class="seller-details">Seller: Abinaya Kannan | Location: Erode</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/beetroot.jpg.webp" alt="Oranges">
+            <div class="details">
+                <h2>Beetroots</h2>
+                <p>Fresh and tangy oranges packed with vitamin C.</p>
+                <p class="seller-details">Seller: Dharshini | Location: Coimbatore</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/onion.jpg" alt="onion">
+            <div class="details">
+                <h2>Onions</h2>
+                <p>Sweet, seedless, and organically grown.</p>
+                <p class="seller-details">Seller: Bala | Location: Erode Hills</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/beans  main.webp" alt=" Peppers">
+            <div class="details">
+                <h2>Beans</h2>
+                <p>Vibrant and fresh bell peppers, perfect for cooking.</p>
+                <p class="seller-details">Seller: Ruban | Location: Thanjavur</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/green_chilli.jpg .jpg" alt="Cucumbers">
+            <div class="details">
+                <h2>Green Chilli</h2>
+                <p>Cool and crisp, great for salads.</p>
+                <p class="seller-details">Seller: Madhumitha | Location: Coimbatore</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/bottle ground.jpg.webp" alt="Cucumbers">
+            <div class="details">
+                <h2>Bottle guard</h2>
+                <p>Cool and crisp, great for salads.</p>
+                <p class="seller-details">Seller: Madhumitha | Location: Coimbatore</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/bitter guard.jpg.webp" alt="Cucumbers">
+            <div class="details">
+                <h2>Bitter guard</h2>
+                <p>Cool and crisp, great for salads.</p>
+                <p class="seller-details">Seller: Madhumitha | Location: Coimbatore</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/red chilli.jpg.webp" alt="Cucumbers">
+            <div class="details">
+                <h2>Red Chilli</h2>
+                <p>Cool and crisp, great for salads.</p>
+                <p class="seller-details">Seller: Madhumitha | Location: Coimbatore</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product-card" onclick="toggleDetails(this)">
+            <img src="../../static/images/cabbage main.webp" alt="Cucumbers">
+            <div class="details">
+                <h2>Cabbage</h2>
+                <p>Cool and crisp, great for salads.</p>
+                <p class="seller-details">Seller: Madhumitha | Location: Coimbatore</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Order Summary Button -->
+    <a href="{% url 'order_summary' %}" class="order-summary-btn">Order Summary</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Farmers Market. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleDetails(element) {
+        element.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% for order in orders %}
+    <div>
+        <h3>{{ order.product.name }} - {{ order.status }}</h3>
+        <form action="{% url 'accept_order' order.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Accept</button>
+        </form>
+        <form action="{% url 'reject_order' order.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Reject</button>
+        </form>
+    </div>
+{% endfor %}

@@ -1,0 +1,258 @@
+body {
+    min-height: 200%; /* Ensures the body is at least as tall as the viewport */
+    scroll-behavior: smooth;
+}
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.carousel-indicator span {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicator .active {
+    background-color: #4caf50;
+}
+
+/* Feature Box Styles */
+.feature-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover img {
+    transform: scale(1.1);
+}
+
+.feature-box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover .content {
+    transform: translateY(0);
+}
+
+.learn-more-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+/* Featured Highlights Styles */
+.featured-highlights {
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.featured-highlights .title {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.featured-highlights .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.featured-highlights .highlight-item {
+    background-color: #e5e7eb; /* gray-200 */
+    height: 16rem; /* 64px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure image does not overflow */
+}
+
+.featured-highlights .highlight-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0; /* Center the image horizontally */
+}
+
+.featured-highlights .description {
+    font-size: 1.125rem; /* lg */
+    margin-bottom: 1.5rem;
+}
+
+.featured-highlights .arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.featured-highlights .arrow-btn:hover {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+
+/* From Uiverse.io by Madflows */ 
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+  
+
+
+/* Modal Styles */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-content {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+/* Navbar Styles */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+     /* Adjust the background color as needed */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for hide/show */
+}
+
+.sticky-nav.hidden {
+    transform: translateY(-100%);
+}
+/* footer.css */
+.footer {
+    background-color: #5FA777;
+    color: #FCF8F7;
+    padding: 1.5rem 0; /* py-6 equivalent */
+    text-align: center;
+}
+
+.footer a {
+    color: #FCF8F7;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #D3E8E4; /* Slightly lighter shade for hover effect */
+}
+
+.bg-homepage-color {
+    background-color: #2A2A2A; /* Example color, update based on your site */
+}
+.text-homepage-secondary {
+    color: #AAAAAA; /* Example color */
+}
+.bg-homepage-accent {
+    background-color: #00A896; /* Example accent color */
+}
+.bg-homepage-accent-light {
+    background-color: #02C39A; /* Lighter accent for hover effect */
+}
+.text-homepage-highlight {
+    color: #FFD700; /* Example highlight color */
+}
+
+
+
+

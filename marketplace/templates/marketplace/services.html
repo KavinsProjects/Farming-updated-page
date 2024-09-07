@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+  
+    <style>
+        body {
+            font-family: 'Saira', sans-serif;
+        }
+        .box-model {
+            padding: 1.5rem; /* Adjust padding as needed */
+            margin: 1rem 0; /* Adjust margin as needed */
+            border: 1px solid #ddd; /* Adjust border color and style as needed */
+            border-radius: 0.5rem; /* Adjust border-radius as needed */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+            background-color: #ffffff; /* Adjust background color as needed */
+        }
+
+        /* footer.css */
+.footer {
+    background-color: #5FA777;
+    color: #FCF8F7;
+    padding: 1.5rem 0; /* py-6 equivalent */
+    text-align: center;
+}
+
+.footer a {
+    color: #FCF8F7;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #D3E8E4; /* Slightly lighter shade for hover effect */
+}
+
+.bg-homepage-color {
+    background-color: #2A2A2A; /* Example color, update based on your site */
+}
+.text-homepage-secondary {
+    color: #AAAAAA; /* Example color */
+}
+.bg-homepage-accent {
+    background-color: #00A896; /* Example accent color */
+}
+.bg-homepage-accent-light {
+    background-color: #02C39A; /* Lighter accent for hover effect */
+}
+.text-homepage-highlight {
+    color: #FFD700; /* Example highlight color */
+}
+
+         
+         
+.material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    }
+
+    .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #28a745;
+  color: white;
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Equal width and height for a circle */
+  border-radius: 50%; /* This makes it a circle */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 1000;
+  text-align: center;
+  line-height: 60px; /* Centers the icon vertically */
+}
+
+.back-to-top:hover {
+  background-color: #218838;
+}
+
+    </style>
+</head>
+<body class="bg-gray-100">
+        <div class="font-sans bg-gray-100 text-gray-900">
+     <!-- Header -->
+    <header class="bg-green-700 text-white sticky-nav">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="{% url 'home' %}" class="text-2xl font-bold">FARM-ACY</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <!-- Home Icon with Link -->
+                    <li>
+                        <a href="{% url 'home' %}" class="flex items-center hover:text-gray-300">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li><a href="{% url 'about' %}" class="hover:text-gray-300">About</a></li>
+                    <li><a href="{% url 'products' %}" class="hover:text-gray-300">Products</a></li>
+                    <li><a href="{% url 'services' %}" class="hover:text-gray-300">Services</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="{% url 'login' %}" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded mx-2">Login</a>
+                <a href="{% url 'register' %}" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Container for the service page content -->
+    <div class="container mx-auto mt-10 p-8">
+        <!-- Title -->
+        <div class="box-model">
+            <h2 class="text-3xl font-bold text-gray-800 text-center">Our Services</h2>
+        </div>
+
+        <!-- Introduction -->
+        <section class="box-model">
+            <p class="text-lg text-gray-700">
+                Welcome to our service page! We offer a range of services to meet your needs and help you achieve your goals. Below is a brief overview of what we can do for you.
+            </p>
+        </section>
+
+        <!-- Benefits for Farmers -->
+        <section class="box-model">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Benefits for Farmers</h3>
+            <p class="text-lg text-gray-700">
+                Farmers can greatly benefit from selling their products directly to buyers through the web application. One of the primary advantages is higher profit margins. By bypassing intermediaries, farmers retain more of the sale price, which increases their income. The application also expands market access, enabling farmers to reach a wider audience beyond their local area, including urban and distant regions. This broader reach helps build stronger, direct relationships with customers, fostering repeat business, loyalty, and valuable feedback.
+            </p>
+            <p class="text-lg text-gray-700">
+                Farmers have better control over pricing without intermediaries setting rates. They can adjust prices based on market demand and production costs, allowing for greater flexibility and optimization of profitability. The platform also supports brand building, giving farmers the opportunity to create and promote their own brands, attracting a loyal customer base.
+            </p>
+            <p class="text-lg text-gray-700">
+                Access to data and insights is another key benefit. Farmers can analyze customer preferences, sales trends, and market demand, which helps in making informed decisions about production and pricing. Additionally, reducing dependency on middlemen grants farmers more autonomy over their sales and operations. Marketing and distribution costs are also lowered as the web application streamlines these efforts, eliminating the need for traditional marketing channels and third-party services.
+            </p>
+            <p class="text-lg text-gray-700">
+                Direct payment from buyers improves cash flow and mitigates the risk of delayed payments that often occur with intermediaries. Farmers can also set their own pricing strategies, adjusting based on demand, costs, or seasonal factors to maximize their profitability.
+            </p>
+        </section>
+
+        <!-- Benefits for Buyers -->
+        <section class="box-model">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Benefits for Buyers</h3>
+            <p class="text-lg text-gray-700">
+                For buyers, the web application offers access to fresher produce directly from farms, often shortening the time from harvest to table. Cost savings are a significant advantage, as eliminating intermediaries results in lower prices with no added markups from distributors or retailers. Transparency is enhanced, allowing buyers to see exactly where their products come from and the farming practices involved, which builds greater trust.
+            </p>
+            <p class="text-lg text-gray-700">
+                By purchasing directly from farmers, buyers support local farming communities and promote sustainable agriculture. They also benefit from customization, as they can request specific products, quantities, or qualities directly from farmers, ensuring their needs are met precisely. The application may provide access to unique, local, or organic products not typically found in traditional retail stores.
+            </p>
+            <p class="text-lg text-gray-700">
+                Ethical and sustainable choices are easier to make, as buyers can select products from farmers who follow these practices, aligning with their personal values. Furthermore, buyers get more value for their money with fresher, higher-quality products that often offer better shelf life and taste. Bulk purchase discounts are another benefit, as buyers might negotiate lower prices for larger orders. The option for customization and tailored pricing allows buyers to request specific quantities or qualities at negotiated prices, giving them flexibility in their purchases.
+            </p>
+        </section>
+
+    </div>
+   <!-- Footer -->
+<footer class="bg-homepage-color text-white py-10 relative">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:space-x-8">
+        <!-- Quick Links Section -->
+        <div>
+            <h3 class="text-xl font-bold mb-4 text-homepage-secondary">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="{% url 'home' %}" class="hover:text-homepage-highlight">Home</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-homepage-highlight">About</a></li>
+                <li><a href="{% url 'products' %}" class="hover:text-homepage-highlight">Products</a></li>
+                <li><a href="{% url 'services' %}" class="hover:text-homepage-highlight">Services</a></li>
+            </ul>
+        </div>
+
+        <!-- Stay in Touch Section -->
+        <div>
+            <h3 class="text-xl font-bold mb-4 text-homepage-secondary">Stay in Touch</h3>
+            <p class="mb-4">Subscribe to our media alerts and receive notifications by email every time we issue a media release.</p>
+            <a href="#" class="bg-homepage-accent hover:bg-homepage-accent-light text-white py-2 px-4 rounded">Sign Up for Alerts</a>
+        </div>
+
+        <!-- ESG Section -->
+        <div>
+            <h3 class="text-xl font-bold mb-4 text-homepage-secondary">Securing Better Food for the Future</h3>
+            <a href="#" class="hover:text-homepage-highlight">
+                <p class="text-homepage-highlight">ESG Report &rarr;</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="border-t border-gray-700 mt-8 pt-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <!-- Copyright -->
+            <p class="text-homepage-secondary text-center md:text-left">&copy; 2024 Your Company. All rights reserved.</p>
+
+            <!-- Footer Links -->
+            <div class="space-x-4 text-center md:text-left">
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Terms and Conditions</a>
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Privacy Policy</a>
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Cookie Policy</a>
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+       
+     <!-- Back to Top Button -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <div class="back-to-top" id="backToTopBtn">
+       <span class="material-symbols-outlined">arrow_upward</span>
+     </div>
+   
+     <script>
+       // Show/Hide Back to Top Button
+       window.onscroll = function() {
+         const backToTopBtn = document.getElementById("backToTopBtn");
+         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+           backToTopBtn.style.display = "block";
+         } else {
+           backToTopBtn.style.display = "none";
+         }
+       };
+   
+       // Scroll to the top when Back to Top Button is clicked
+       document.getElementById("backToTopBtn").onclick = function() {
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+       };
+   
+       document.addEventListener('DOMContentLoaded', () => {
+               // Navbar hide on scroll
+               let lastScrollTop = 0;
+               const navbar = document.querySelector('.sticky-nav');
+               window.addEventListener('scroll', () => {
+                   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                   if (scrollTop > lastScrollTop) {
+                       navbar.style.top = '-60px'; // Adjust based on your navbar height
+                   } else {
+                       navbar.style.top = '0';
+                   }
+                   lastScrollTop = scrollTop;
+               });
+           });
+     </script>
+   </footer>
+
+
+</body>
+</html>

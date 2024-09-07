@@ -1,0 +1,421 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARM-ACY</title>
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+    
+    <link rel="stylesheet" href="../../static/css/home.css">
+</head>
+<body class="font-sans bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-green-700 text-white sticky-nav">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="{% url 'home' %}" class="text-2xl font-bold">FARM-ACY</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <!-- Home Icon with Link -->
+                    <li>
+                        <a href="{% url 'home' %}" class="flex items-center hover:text-gray-300">
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <li><a href="{% url 'about' %}" class="hover:text-gray-300">About</a></li>
+                    <li><a href="{% url 'products' %}" class="hover:text-gray-300">Products</a></li>
+                    <li><a href="{% url 'services' %}" class="hover:text-gray-300">Services</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="{% url 'login' %}" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded mx-2">Login</a>
+                <a href="{% url 'register' %}" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <Style>
+         
+         
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    }
+
+    .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #28a745;
+  color: white;
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Equal width and height for a circle */
+  border-radius: 50%; /* This makes it a circle */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 1000;
+  text-align: center;
+  line-height: 60px; /* Centers the icon vertically */
+}
+
+.back-to-top:hover {
+  background-color: #218838;
+}
+
+    </Style>
+
+    <!-- Remaining Content of Home Page -->
+
+</body>
+</html>
+
+
+
+    <!-- Carousel Section -->
+    <section class="relative h-96 overflow-hidden">
+        <div class="carousel relative h-full">
+            <div class="carousel-slide active" style="background-image: url('../../static/images/Slid01.png');"></div>
+            <div class="carousel-slide" style="background-image: url('https://img.freepik.com/free-vector/farm-template-design_23-2150192773.jpg?w=1060&t=st=1725520246~exp=1725520846~hmac=26b2359af64650e6526cf24e18d5be8e8fbfc8cd320a5cfc2052a9c783a4748d');"></div>
+            <div class="carousel-slide" style="background-image: url('../../static/images/slid2.jpg');"></div>
+        </div>
+        <div class="carousel-indicator">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+<br>
+    <h2 class="text-4xl font-bold text-green-#5FA777 mb-6 text-center"> Fresh From Our Farms</h2>
+
+
+<!-- Intro Section --><!-- Box with Background Image and Text -->
+<section class="relative bg-cover bg-center py-20" style="background-image: url('../../static/images/Slid03.png');">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto bg-white bg-opacity-80 p-8 rounded-lg shadow-lg">
+           
+            <p class="text-lg text-gray-700 mb-4">
+                Welcome to FARM-ACY, where we bring nature's bounty straight to your table. Our farms cultivate the freshest fruits, vegetables, and crops, harvested with care and commitment to quality. Experience the natural goodness of organic farming and taste the difference in every product we offer.
+            </p>
+            <p class="text-lg text-gray-700 mb-4">
+                With a focus on sustainability, we support local farmers and communities by promoting eco-friendly practices that ensure the highest standards of agricultural excellence.
+            </p>
+            <div class="text-center mt-6">
+                <a href="{% url 'products' %}" class="bg-green-600 hover:bg-green-500 text-white py-3 px-6 rounded-full text-lg transition-colors duration-300">
+                    Discover Our Products
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Features Section -->
+    <section class="container mx-auto p-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature Box 1 -->
+            <div class="feature-box relative bg-white rounded shadow-lg overflow-hidden group">
+                <img src="../../static/images/veges.jpeg" alt="Feature 1" class="w-full h-60 object-cover">
+                <div class="content absolute bottom-0 w-full bg-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h2 class="text-xl font-semibold mb-2">VEGETABLES</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    <a href="product.html" class="learn-more-btn mt-4 inline-flex items-center text-green-600 border-2 border-green-600 py-2 px-4 rounded transition-colors duration-300">
+                        Explore
+                        <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Feature Box 2 -->
+            <div class="feature-box relative bg-white rounded shadow-lg overflow-hidden group">
+                <img src="https://th.bing.com/th/id/OIP.-az9hn-WWQ_t2v1dOPFNZQAAAA?w=243&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Feature 2" class="w-full h-60 object-cover">
+                <div class="content absolute bottom-0 w-full bg-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h2 class="text-xl font-semibold mb-2">CROPS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    <a href="#" class="learn-more-btn mt-4 inline-flex items-center text-green-600 border-2 border-green-600 py-2 px-4 rounded transition-colors duration-300">
+                        Comming Soon
+                        <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Feature Box 3 -->
+            <div class="feature-box relative bg-white rounded shadow-lg overflow-hidden group">
+                <img src="../../static/images/Furite.jpg" alt="Feature 3" class="w-full h-60 object-cover">
+                <div class="content absolute bottom-0 w-full bg-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h2 class="text-xl font-semibold mb-2">FRUITS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    <a href="#" class="learn-more-btn mt-4 inline-flex items-center text-green-600 border-2 border-green-600 py-2 px-4 rounded transition-colors duration-300">
+                        Comming Soon
+                        <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Feature Box 4 -->
+            <div class="feature-box relative bg-white rounded shadow-lg overflow-hidden group">
+                <img src="../../static/images/spices.jpg" alt="Feature 4" class="w-full h-60 object-cover">
+                <div class="content absolute bottom-0 w-full bg-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h2 class="text-xl font-semibold mb-2">SPICES</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    <a href="#" class="learn-more-btn mt-4 inline-flex items-center text-green-600 border-2 border-green-600 py-2 px-4 rounded transition-colors duration-300">
+                        Comming Soon
+                        <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Feature Box 5 -->
+            <div class="feature-box relative bg-white rounded shadow-lg overflow-hidden group">
+                <img src="../../static/images/flower.jpg" alt="Feature 5" class="w-full h-60 object-cover">
+                <div class="content absolute bottom-0 w-full bg-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h2 class="text-xl font-semibold mb-2">FLOWERS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    <a href="#" class="learn-more-btn mt-4 inline-flex items-center text-green-600 border-2 border-green-600 py-2 px-4 rounded transition-colors duration-300">
+                        Comming Soon
+                        <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Feature Box 6 -->
+            <div class="feature-box relative bg-white rounded shadow-lg overflow-hidden group">
+                <img src="../../static/images/coconut.jpg" alt="Feature 6" class="w-full h-60 object-cover">
+                <div class="content absolute bottom-0 w-full bg-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h2 class="text-xl font-semibold mb-2">OTHERS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    <a href="#" class="learn-more-btn mt-4 inline-flex items-center text-green-600 border-2 border-green-600 py-2 px-4 rounded transition-colors duration-300">
+                        Comming Soon
+                        <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<script src="../../static/js/home.js"></script>
+
+
+<!-- Meet the Team Section -->
+<section class="container mx-auto p-8">
+    <h2 class="text-3xl font-bold mb-8 text-center">Meet the Team</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Team Member 1 (Front-end Developer) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center p-6">
+            <img src="../../static/images/kavin.jpg" alt="Front-end Developer 1" class="w-32 h-32 object-cover rounded-full mx-auto">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">Kavin</h3>
+                <p class="text-gray-600">Front-end Developer</p>
+                <p class="mt-2 text-gray-700">Specializes in creating stunning user interfaces and improving user experience.</p>
+                <br>
+            
+                    <button class="button">
+                      
+                        <span class="button-content">Instagram</span>
+                    </button>
+                
+            </div>
+        </div>
+        
+        <!-- Team Member 2 (Front-end Developer) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center p-6">
+            <img src="../../static/images/profile2.jpg" alt="Front-end Developer 2" class="w-32 h-32 object-cover rounded-full mx-auto">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">Ebi </h3>
+                <p class="text-gray-600">Front-end Developer</p>
+                <p class="mt-2 text-gray-700">Passionate about crafting responsive websites with modern JavaScript frameworks.</p>
+
+                <br></br>
+                <button class="button">
+                  <span class="button-content">insatgram </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Team Member 3 (Front-end Developer) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center p-6">
+            <img src="../../static/images/profile3.jpg" alt="Front-end Developer 3" class="w-32 h-32 object-cover rounded-full mx-auto">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">madhu</h3>
+                <p class="text-gray-600">Front-end Developer</p>
+                <p class="mt-2 text-gray-700">Expert in building interactive websites with HTML, CSS, and JavaScript.</p>
+
+                <br></br>
+                <button class="button">
+                  <span class="button-content">insatgram </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Team Member 4 (Back-end Developer) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center p-6">
+            <img src="../../static/images/bala.png" alt="Back-end Developer 1" class="w-32 h-32 object-cover rounded-full mx-auto">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">bala</h3>
+                <p class="text-gray-600">Back-end Developer</p>
+                <p class="mt-2 text-gray-700">Skilled in database management and server-side programming.</p>
+
+                <br></br>
+                <button class="button">
+                  <span class="button-content">insatgram </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Team Member 5 (Back-end Developer) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center p-6">
+            <img src="../../static/images/profile5.jpg" alt="Back-end Developer 2" class="w-32 h-32 object-cover rounded-full mx-auto">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">Vasanth roobuan</h3>
+                <p class="text-gray-600">Back-end Developer</p>
+                <p class="mt-2 text-gray-700">Focused on building scalable, secure, and efficient APIs.</p>
+
+                <br></br>
+                <button class="button">
+                  <span class="button-content">insatgram </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Team Member 6 (Back-end Developer) -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center p-6">
+            <img src="../../static/images/profile6.jpg" alt="Back-end Developer 3" class="w-32 h-32 object-cover rounded-full mx-auto">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">Dharshini</h3>
+                <p class="text-gray-600">Back-end Developer</p>
+                <p class="mt-2 text-gray-700">Expert in server management and backend architecture.</p>
+
+                <br></br>
+                <button class="button">
+                  <span class="button-content">insatgram </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Featured Highlights Section 
+    <section class="featured-highlights text-center p-8">
+        <h2 class="text-3xl font-semibold mb-6">Featured Highlights</h2>
+        <div class="highlight-grid grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="highlight-item flex items-center justify-center bg-gray-200">
+                <img src="https://via.placeholder.com/400x300" alt="Highlight 1">
+            </div>
+            <div class="highlight-item flex items-center justify-center bg-gray-200">
+                <img src="https://via.placeholder.com/400x300" alt="Highlight 2">
+            </div>
+        </div>
+        <p class="text-lg mb-6">Explore our featured highlights and discover what makes us stand out.</p>
+        <a href="another-page.html" class="arrow-btn inline-flex items-center text-green-600 border-2 border-green-600 py-2 px-4 rounded transition-colors duration-300">
+            Learn More
+            <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+    </section>-->
+
+    
+<!-- Footer -->
+<footer class="bg-homepage-color text-white py-10 relative">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Quick Links Section -->
+        <div>
+            <h3 class="text-xl font-bold mb-4 text-homepage-secondary">Quick links</h3>
+            <ul class="space-y-2">
+                <li><a href="{% url 'home' %}" class="hover:text-homepage-highlight">Home</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-homepage-highlight">About</a></li>
+                <li><a href="{% url 'products' %}" class="hover:text-homepage-highlight">Products</a></li>
+                <li><a href="{% url 'services' %}" class="hover:text-homepage-highlight">service</a></li>
+        
+            </ul>
+        </div>
+
+        <!-- Stay in Touch Section -->
+        <div>
+            <h3 class="text-xl font-bold mb-4 text-homepage-secondary">Stay in touch</h3>
+            <p class="mb-4">Subscribe to our media alerts and receive notifications by email every time we issue a media release.</p>
+            <a href="#" class="bg-homepage-accent hover:bg-homepage-accent-light text-white py-2 px-4 rounded">Sign up for alerts</a>
+        </div>
+
+        <!-- Securing Better Food for the Future Section -->
+        <div>
+            <h3 class="text-xl font-bold mb-4 text-homepage-secondary">Securing better food for the future</h3>
+            <a href="#">
+                
+                <p class="text-homepage-highlight">ESG Report &rarr;</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="border-t border-gray-700 mt-8 pt-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <!-- Copyright and Links -->
+            <p class="text-homepage-secondary text-center md:text-left">&copy; 2024 Your Company. All rights reserved.</p>
+            <div class="space-x-4 text-center md:text-left">
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Terms and Conditions</a>
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Privacy Policy</a>
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Cookie Policy</a>
+                <a href="#" class="text-homepage-secondary hover:text-homepage-highlight">Sitemap</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <div class="back-to-top" id="backToTopBtn">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </div>
+
+  <script>
+    // Show/Hide Back to Top Button
+    window.onscroll = function() {
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    // Scroll to the top when Back to Top Button is clicked
+    document.getElementById("backToTopBtn").onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+            // Navbar hide on scroll
+            let lastScrollTop = 0;
+            const navbar = document.querySelector('.sticky-nav');
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    navbar.style.top = '-60px'; // Adjust based on your navbar height
+                } else {
+                    navbar.style.top = '0';
+                }
+                lastScrollTop = scrollTop;
+            });
+        });
+  </script>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="../../static/js/home.js"></script>
+</body>
+</html>
